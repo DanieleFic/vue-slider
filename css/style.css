@@ -86,3 +86,9 @@ img {
     opacity: 1;
     border: 3px solid black;
 }
+
+.testo{
+    position: absolute;
+    top: 80%;
+    left: 1%;
+}

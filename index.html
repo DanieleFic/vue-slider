@@ -12,10 +12,12 @@
 <body>
     <div id="app" class="ms_maincontainer position-relative ">
         <div class=" ms_maincontainer2 position-absolute top-50 start-50 translate-middle d-flex ">
-            <div v-for="(elem,indice) in schedeImmagini.immaginiArr" class="container border border-2 border-danger  p-0 ms_main item"  :class="iscorrente(indice)">
+            <div v-for="(elem,indice) in schedeImmagini.immaginiArr" class="container border border-2 border-danger  position-relative p-0 ms_main item"  :class="iscorrente(indice)">
                 <img :src="elem" alt="">
-                <h4 v-bind:="elem.title"></h4>
-                <h6 v-bind:="elem.text"></h6>
+                <div class="testo text-white">
+                    <h3>{{schedeImmagini.title[indice]}}</h3>
+                    <h6>{{schedeImmagini.text[indice]}}</h6>
+                </div>
             </div>
             <div>
                 <div class="ms_side  text-center d-flex border border-2 border-danger position-relative flex-column">
