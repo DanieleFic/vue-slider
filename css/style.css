@@ -14,6 +14,11 @@ a{
     width: 100px;
 }
 
+.lateral{
+    width: 200px;
+    height: 100px;
+}
+
 img {
     height: 100%;
     width: 100%;
@@ -22,12 +27,13 @@ img {
 
 
 .ms_maincontainer{
-    width: 1000px;
-    height: 1000px;
+    width: 100vw;
+    height: 100vh;
 }
 
 .ms_maincontainer2{
-    width: 100%;
+    width: 1000px;
+    height: 500px;
 }
 
 .ms_text{
@@ -40,10 +46,7 @@ img {
     display: none;
 }
 
-.item{
-    height: 100%;
-    
-}
+
 
 .items{
     height: calc(100% / 5);

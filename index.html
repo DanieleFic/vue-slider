@@ -10,36 +10,41 @@
     <title>JS-ARRAY-CAROUSEL</title>
 </head>
 <body>
-    <div id="app" class="ms_maincontainer container-fluid ">
-        <div class=" ms_maincontainer2 border border-2 border-danger rounded  my-5 p-0  d-flex flex-column ">
-            <div v-for="(elem,indice) in schedeImmagini.immaginiArr" class="container  p-0 ms_main" class="item" :class="iscorrente(indice)">
+    <div id="app" class="ms_maincontainer position-relative ">
+        <div class=" ms_maincontainer2 position-absolute top-50 start-50 translate-middle d-flex ">
+            <div v-for="(elem,indice) in schedeImmagini.immaginiArr" class="container border border-2 border-danger  p-0 ms_main item"  :class="iscorrente(indice)">
                 <img :src="elem" alt="">
                 <h4 v-bind:="elem.title"></h4>
                 <h6 v-bind:="elem.text"></h6>
             </div>
-        </div>
-        <div class="float-end">
-            <div class="ms_side  text-center d-flex border-start border-2 border-danger position-relative flex-column">
-                <div id="ms_up ">
-                    <a class="prev ms_up   position-absolute top-0 start-50 translate-middle-x">	
-                        &#9650;
-                    </a>
-                </div>
-
-                <div  class=" d-flex flex-column ">
-                    <div v-for="(elem,indice) in schedeImmagini.immaginiArr"   class="item" :class="iscorrente(indice)">
-                        <img :src="elem" alt="">
+            <div>
+                <div class="ms_side  text-center d-flex border border-2 border-danger position-relative flex-column">
+                    <div id="ms_up ">
+                        <a class="prev ms_up   position-absolute top-0 start-50 translate-middle-x">	
+                            &#9650;
+                        </a>
+                    </div>
+    
+                    <div  class=" d-flex flex-column ">
+                        <div v-for="(elem,indice) in schedeImmagini.immaginiArr"   class="item" :class="iscorrente(indice)">
+                            <img :src="elem" alt="">
+                        </div>
+                    </div>
+                    
+                    
+                    <div id="ms_down">
+                        <a class=" ms_down text-center  position-absolute bottom-0 start-50 translate-middle-x">
+                            &#9660;
+        
+                        </a>
                     </div>
                 </div>
-                
-                
-                <div id="ms_down">
-                    <a class=" ms_down text-center  position-absolute bottom-0 start-50 translate-middle-x">
-                        &#9660;
-    
-                    </a>
-                </div>
-            </div>
+        </div>
+        <!--<div class="lateral d-flex flex-column position-relative">
+                <div class="prev position-absolute top-0 text-center">&uarr;</div>
+                <div class="next position-absolute bottom-0 text-center">&darr;</div>
+            </div>-->
+        
         </div>  
     </div>
     <!-- JavaScript Bundle with Popper -->
