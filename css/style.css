@@ -1,10 +1,7 @@
 body{
     background-color: cadetblue;
 }
-.ms_main{
-    height: 500px;
-    width: 1000px;
-}
+
 
 a{
     color: black;
@@ -14,16 +11,23 @@ a{
 
 .ms_side{
     height: 500px;
+    width: 100px;
 }
 
 img {
     height: 100%;
     width: 100%;
+    object-fit: cover;
 }
 
 
 .ms_maincontainer{
     width: 1000px;
+    height: 1000px;
+}
+
+.ms_maincontainer2{
+    width: 100%;
 }
 
 .ms_text{
@@ -32,10 +36,13 @@ img {
     color: white;
 }
 
+.dnone{
+    display: none;
+}
 
 .item{
     height: 100%;
-    display: none;
+    
 }
 
 .items{
