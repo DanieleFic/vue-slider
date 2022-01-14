@@ -3,7 +3,7 @@ let app = new Vue({
     el: "#app",
     data: {
         corrente : 0,
-        schedeImmagini : {
+        schedePosti : {
             immaginiArr : [
             'img/01.jpg',
             'img/02.jpg',
@@ -19,11 +19,11 @@ let app = new Vue({
                 'Paradise'
             ],
             text : [
-                'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam, cumque provident totam omnis, magnam dolores dolorum corporis.',
-                'Lorem ipsum',
-                'Lorem ipsum, dolor sit amet consectetur adipisicing elit.',
-                'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam,',
-                'Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam,',
+                'L’arcipelago di Göteborg comprende tutte le isole del comune di Öckerö e quelle del distretto di Styrsö, un quartiere di questa bella città tra i più grandi della Svezia.',
+                'I villaggi tradizionali delle Alpi svizzere, come Arona, St. Moritz, Davos, Saas Fee, Cras-Montana e Gstaad, hanno un fascino senza tempo come i castelli.',
+                'Big Ben è il soprannome della campana più grande della torre dell orologioe all intera torre in stile neogotico, alta 96 m, la cui edificazione iniziò nel 1834 e si concluse nel 1858',
+                'In Germania si trovano alcuni dei più straordinari paesaggi naturali di tutta Europa, perfetti per escursioni in campagna e uscite in barca sui laghi alpini.',
+                'Paradise è un luogo bello ',
             ],
         }
     },
@@ -38,19 +38,17 @@ let app = new Vue({
         sopra: function(){
             this.corrente --;
             if(this.corrente < 0 ){
-                this.corrente = this.schedeImmagini.immaginiArr.length -1;
+                this.corrente = this.schedePosti.immaginiArr.length -1;
 
             }
         },
         sotto: function(){
             this.corrente ++;
-            if(this.corrente == this.schedeImmagini.immaginiArr.length){
+            if(this.corrente == this.schedePosti.immaginiArr.length){
                 this.corrente = 0;
             }
         },
-        attiva: function (){
-            
-        }
+        
     }
         
 })

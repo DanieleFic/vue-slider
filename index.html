@@ -12,11 +12,11 @@
 <body>
     <div id="app" class="ms_maincontainer position-relative ">
         <div class=" ms_maincontainer2 position-absolute top-50 start-50 translate-middle d-flex ">
-            <div v-for="(elem,indice) in schedeImmagini.immaginiArr" class="container border border-2 border-danger  position-relative p-0 ms_main"  :class="iscorrente(indice)">
+            <div v-for="(elem,indice) in schedePosti.immaginiArr" class="container border border-2 border-danger  position-relative p-0 ms_main"  :class="iscorrente(indice)">
                 <img :src="elem" alt="">
                 <div class="testo text-white">
-                    <h3>{{schedeImmagini.title[indice]}}</h3>
-                    <h6>{{schedeImmagini.text[indice]}}</h6>
+                    <h3>{{schedePosti.title[indice]}}</h3>
+                    <h6>{{schedePosti.text[indice]}}</h6>
                 </div>
             </div>
         
@@ -28,8 +28,8 @@
                 </div>
 
                 <div  class=" ms_side2 d-flex flex-column ">
-                    <div v-for="(elem,indice) in schedeImmagini.immaginiArr"   class="items" >
-                        <img @click="attiva" :src="elem" alt="">
+                    <div v-for="(elem,indice) in schedePosti.immaginiArr"   class="items" >
+                        <img  :src="elem" alt="">
                     </div>
                 </div>
                 
