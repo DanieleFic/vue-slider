@@ -34,8 +34,25 @@ let app = new Vue({
                 return "active";
             }
             return "dnone";
+        },
+        sopra: function(){
+            this.corrente --;
+            if(this.corrente < 0 ){
+                this.corrente = this.schedeImmagini.immaginiArr.length -1;
+
+            }
+        },
+        sotto: function(){
+            this.corrente ++;
+            if(this.corrente == this.schedeImmagini.immaginiArr.length){
+                this.corrente = 0;
+            }
+        },
+        attiva: function (){
+            
         }
     }
+        
 })
 
 /*

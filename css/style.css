@@ -2,7 +2,6 @@ body{
     background-color: cadetblue;
 }
 
-
 a{
     color: black;
     opacity: 0.5;
@@ -10,8 +9,13 @@ a{
 }
 
 .ms_side{
-    height: 500px;
-    width: 100px;
+    height: 100%;
+    width: 200px;
+
+}
+
+.ms_side2{
+    height: 100%;
 }
 
 .lateral{
@@ -46,8 +50,6 @@ img {
     display: none;
 }
 
-
-
 .items{
     height: calc(100% / 5);
     opacity: 0.7;
@@ -55,12 +57,30 @@ img {
 
 .items img{
     height: 100%;
+    width: 100%;
 }
 
 .active{
     display: block;
     position: relative;
     opacity: 1;
+}
+
+
+
+  .ms_up:hover, .ms_down:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+
+.activeminiature{
+    opacity: 1;
+    border: 3px solid black;
+}
+
+.testo{
+    position: absolute;
+    top: 80%;
+    left: 1%;
 }
 
 .ms_up, .ms_down {
@@ -77,18 +97,3 @@ img {
     width: 100%;
     z-index: 3;
   }
-
-  .ms_up:hover, .ms_down:hover {
-    background-color: rgba(0,0,0,0.8);
-  }
-
-.activeminiature{
-    opacity: 1;
-    border: 3px solid black;
-}
-
-.testo{
-    position: absolute;
-    top: 80%;
-    left: 1%;
-}
