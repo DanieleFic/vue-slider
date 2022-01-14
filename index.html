@@ -22,14 +22,14 @@
         
             <div class="ms_side  text-center d-flex border border-2 border-danger position-relative flex-column">
                 <div id="ms_up ">
-                    <a   @click="sopra" class="prev ms_up position-absolute top-0 start-50 translate-middle-x ">	
+                    <a   @click="sopra(indice)" class="prev ms_up position-absolute top-0 start-50 translate-middle-x ">	
                         &#9650;
                     </a>
                 </div>
 
                 <div  class=" ms_side2 d-flex flex-column ">
                     <div v-for="(elem,indice) in schedePosti.immaginiArr"   class="items" >
-                        <img  :src="elem" alt="">
+                        <img @click="attiva(indice)"  :src="elem" alt="">
                     </div>
                 </div>
                 

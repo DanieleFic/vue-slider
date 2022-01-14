@@ -48,7 +48,9 @@ let app = new Vue({
                 this.corrente = 0;
             }
         },
-        
+        attiva: function( attivaindex){
+            this.corrente = attivaindex
+        },
     }
         
 })
