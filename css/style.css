@@ -1,0 +1,78 @@
+body{
+    background-color: cadetblue;
+}
+.ms_main{
+    height: 500px;
+    width: 1000px;
+}
+
+a{
+    color: black;
+    opacity: 0.5;
+    text-decoration: none;
+}
+
+.ms_side{
+    height: 500px;
+}
+
+img {
+    height: 100%;
+    width: 100%;
+}
+
+
+.ms_maincontainer{
+    width: 1000px;
+}
+
+.ms_text{
+    position: absolute;
+    top: 70%;
+    color: white;
+}
+
+
+.item{
+    height: 100%;
+    display: none;
+}
+
+.items{
+    height: calc(100% / 5);
+    opacity: 0.7;
+}
+
+.items img{
+    height: 100%;
+}
+
+.active{
+    display: block;
+    position: relative;
+    opacity: 1;
+}
+
+.ms_up, .ms_down {
+    cursor: pointer;
+    position: absolute;
+    width: auto;
+    color: black;
+    font-weight: bold;
+    font-size: 15px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    background-color: white;
+    width: 100%;
+    z-index: 3;
+  }
+
+  .ms_up:hover, .ms_down:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+
+.activeminiature{
+    opacity: 1;
+    border: 3px solid black;
+}
