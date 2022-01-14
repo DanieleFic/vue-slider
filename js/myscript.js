@@ -48,10 +48,17 @@ let app = new Vue({
                 this.corrente = 0;
             }
         },
-        attiva: function( attivaindex){
+        attiva: function( attivaindex ){
             this.corrente = attivaindex
         },
-    }
+        timercarosel: function(){
+            setInterval(this.sotto, 5000);
+        } 
+    },   
+        created:
+            function() {
+            this.timercarosel();
+        }
         
 })
 

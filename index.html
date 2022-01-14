@@ -12,7 +12,7 @@
 <body>
     <div id="app" class="ms_maincontainer position-relative ">
         <div class=" ms_maincontainer2 position-absolute top-50 start-50 translate-middle d-flex ">
-            <div v-for="(elem,indice) in schedePosti.immaginiArr" class="container border border-2 border-danger  position-relative p-0 ms_main"  :class="iscorrente(indice)">
+            <div v-for="(elem,indice) in schedePosti.immaginiArr" v-if="timercarosel" class="container border border-2 border-danger  position-relative p-0 ms_main"  :class="iscorrente(indice)">
                 <img :src="elem" alt="">
                 <div class="testo text-white">
                     <h3>{{schedePosti.title[indice]}}</h3>
