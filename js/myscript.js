@@ -2,6 +2,7 @@
 let app = new Vue({
     el: "#app",
     data: {
+        timer: 0,
         corrente : 0,
         schedePosti : {
             immaginiArr : [
@@ -48,19 +49,28 @@ let app = new Vue({
                 this.corrente = 0;
             }
         },
+        mounted: function () {
+            this.startRotation();
+        },
         attiva: function( attivaindex ){
             this.corrente = attivaindex
         },
-        timercarosel: function(){
-            setInterval(this.sotto, 5000);
-        } 
-    },   
-        created:
-            function() {
-            this.timercarosel();
-        }
+        startRotation: function(){
+            this.timer = setInterval(this.sotto, 5000);
+        },
+        stopRotation: function() {
+            clearInterval(this.timer);
+            console.log("fermati pls")
+            },
+        },
         
+            created:
+            function() {
+            this.startRotation();
+        }
 })
+
+
 
 /*
 //inizio immagini principali

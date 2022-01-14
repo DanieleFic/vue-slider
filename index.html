@@ -11,8 +11,8 @@
 </head>
 <body>
     <div id="app" class="ms_maincontainer position-relative ">
-        <div class=" ms_maincontainer2 position-absolute top-50 start-50 translate-middle d-flex ">
-            <div v-for="(elem,indice) in schedePosti.immaginiArr" v-if="timercarosel" class="container border border-2 border-danger  position-relative p-0 ms_main"  :class="iscorrente(indice)">
+        <div  class=" ms_maincontainer2 position-absolute top-50 start-50 translate-middle d-flex ">
+            <div v-for="(elem,indice) in schedePosti.immaginiArr" v-if="startRotation" class="container border border-2 border-danger  position-relative p-0 ms_main"  :class="iscorrente(indice)">
                 <img :src="elem" alt="">
                 <div class="testo text-white">
                     <h3>{{schedePosti.title[indice]}}</h3>
@@ -27,8 +27,8 @@
                     </a>
                 </div>
 
-                <div  class=" ms_side2 d-flex flex-column ">
-                    <div v-for="(elem,indice) in schedePosti.immaginiArr"   class="items" >
+                <div  @mouseover="stopRotation"  @mouseout="startRotation"  class=" ms_side2 d-flex flex-column z-index-1">
+                    <div  v-for="(elem,indice) in schedePosti.immaginiArr"   class="items" >
                         <img @click="attiva(indice)"  :src="elem" alt="">
                     </div>
                 </div>
@@ -55,3 +55,7 @@
     <script src="js/myscript.js"></script>
 </body>
 </html>
+
+
+
+    
